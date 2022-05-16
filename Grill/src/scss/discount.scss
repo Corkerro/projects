@@ -1,0 +1,83 @@
+.discount {
+    background: url(../img/3/Background.png)center no-repeat;
+    background-size: cover;
+    margin-top: rem(63);
+    color: $yellowColor;
+    &__leftSide{
+        @include adaptiveValue("width",703,240);
+        margin: 0px auto;
+    }
+    &__container {
+
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',60,10);
+        
+    }
+
+    &__rightSide-title {
+
+        @include adaptiveValue("font-size",42,32);
+        font-weight: 500;
+        @media only screen and (min-width: rem(1224)){
+            text-align: right;
+        }
+        margin-bottom: rem(38);
+        @media only screen and (max-width: rem(1223)){
+            text-align: center;
+        }
+    }
+
+    &__rightSide-bold {
+        font-weight: 800;
+    }
+
+    &__rightSide-btn {
+        @media only screen and (min-width: rem(1224)){
+            text-align: right;
+        }
+        @media only screen and (max-width: rem(1223)){
+            text-align: center;
+        }
+    }
+    &__rightSide-btn-href{
+        padding: rem(8) rem(42);
+        background-color: $yellowColor;
+        color: $blackColor;
+        @include adaptiveValue("font-size",32,22);
+        margin: 0px auto;
+        &:hover{
+            color: $yellowColor;
+            background-color: $blackColor;
+        }
+    }
+
+    &__rightSide-logo {
+        margin-top: rem(70);
+        margin-bottom: rem(20);
+        @include adaptiveValue("width",156,110);
+        @media only screen and (max-width: rem(1224)){
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media only screen and (min-width: rem(1223)){
+            margin-left: rem(300);
+        }
+    }
+
+    &__rightSide-lowtext {
+
+        @include adaptiveValue("font-size",28,18);
+        font-weight: 500;
+        @media only screen and (min-width: rem(1224)){
+            text-align: right;
+        }
+        margin-bottom: rem(38);
+        @media only screen and (max-width: rem(1223)){
+            text-align: center;
+        }
+    }
+}

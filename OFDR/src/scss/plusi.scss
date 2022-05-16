@@ -1,0 +1,46 @@
+.plusi {
+    background-color: #F6F6F6;
+    margin: rem(50) 0;
+    padding: rem(45) 0;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: rem(40);
+        @include adaptiveValue("column-gap",30,10);
+    }
+
+    &__card {
+        max-width: rem(262);
+        height: rem(192);
+    }
+
+    &__photo {
+
+    }
+
+    &__img {
+        width: rem(84);
+        height: rem(84);
+        padding: rem(22);
+        background-color: #fff;
+        border: 1px solid #E8E8E8;
+        border-radius: 35%;
+        margin-left: rem(94);
+        margin-bottom: rem(15);
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 800;
+        font-size: rem(22);
+        margin-bottom: rem(15);
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-weight: 400;
+        font-size: rem(17);
+    }
+}

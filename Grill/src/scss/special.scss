@@ -1,0 +1,62 @@
+.special {
+    margin-top: rem(60);
+    width: 100%;
+    background: url(../img/4/Background.png)center no-repeat;
+    background-size: cover;
+    @include adaptiveValue("padding-top",76,76/3);
+    height: rem(800);
+    &__top {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',80,20);
+        row-gap: rem(40);
+        margin-bottom: rem(40);
+    }
+
+    &__leftSide {
+        border: rem(5) solid $yellowColor;
+        @include adaptiveValue("width",587,320)
+    }
+
+    &__leftSide-title {
+        text-transform: uppercase;
+        padding: rem(16);
+        background-color: $yellowColor;
+        color: $blackColor;
+        font-size: rem(28);
+        font-weight: 800;
+    }
+
+    &__leftSide-subtitle {
+        color: #fff;
+        text-align: center;
+        font-size: rem(28);
+        font-weight: 400;
+        padding: rem(42) 0;
+    }
+
+    &__rightSide {
+        @include adaptiveValue("width",587,320);
+
+        color: #fff;
+        font-size: rem(22);
+        
+    }
+}
+.special__img-1{
+    @include adaptiveValue("width",781,781/4);
+}
+.special__img-2{
+    position: relative;
+    @include adaptiveValue("top",80,80/4.4);
+    @include adaptiveValue("right",60,60/6);
+    @include adaptiveValue("width",385,385/4);
+}
+.special__img-3{
+    position: relative;
+    @include adaptiveValue("width",341,341/6);
+    @include adaptiveValue("bottom",700,700/3.6);
+    right: -70%;
+}

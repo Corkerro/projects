@@ -1,0 +1,62 @@
+.method {
+    background: url(../img/5/Background.png)center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: rem(90);
+    @media only screen and (min-width: rem(1241)){
+        padding: rem(300) 0;
+    }
+    @media only screen and (max-width: rem(1240)){
+        @include adaptiveValue("padding-top",80,80/2);
+        @include adaptiveValue("padding-bottom",80,80/2);
+    }
+    
+    &__img {
+        position: absolute;
+        @media only screen and (max-width: rem(1240)){
+            display: none;
+        }
+        
+        left: 0;
+    }
+    &__relative{
+        position: relative;
+        top: rem(-190);
+    }
+
+    &__container {
+
+    }
+    &__rightSide{
+        text-align: right;
+        width: 100%;
+    }
+    &__rightSide-inner{
+        text-align: right;
+        border: rem(5) solid $yellowColor;
+        @include adaptiveValue("width",587,320);
+        @media only screen and (min-width: rem(1241)){
+            margin: 0 0 0 auto;
+        }
+        @media only screen and (max-width: rem(1240)){
+            margin: 0px auto;
+        }
+    }
+    &__rightSide-title{
+        text-align: left;
+        text-transform: uppercase;
+        padding: rem(16);
+        background-color: $yellowColor;
+        color: $blackColor;
+        font-size: rem(28);
+        font-weight: 800;
+    }
+    &__rightSide-subtitle{
+        color: #fff;
+        text-align: center;
+        font-size: rem(28);
+        font-weight: 400;
+        padding: rem(42) rem(10);
+    }
+}
+

@@ -1,0 +1,8 @@
+{
+  "name": "Export Kit - Lightning Storm",
+  "id": "917838882021857002",
+  "api": "1.0.0",
+  "main": "LightningStorm.figma.js",
+  "ui": "LightningStorm.panel.html",
+  "editorType": ["figma"]
+}
