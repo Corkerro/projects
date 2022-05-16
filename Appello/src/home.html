@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			@@include('html/_dev-partner.htm',{})
+			@@include('html/_wayn.htm',{})
+			@@include('html/_ourwork.htm',{})
+			@@include('html/_more.htm',{})
+			@@include('html/_rel.htm',{})
+			@@include('html/_regional.htm',{})
+			@@include('html/_form.htm',{})
+			@@include('html/_industry.htm',{})
+			@@include('html/_resources.htm',{})
+			@@include('html/_faq.htm',{})
+
+			@@include('html/_kickstart.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	<head>
+		<link
+		  rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+	  </head>
+	<script src="js/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

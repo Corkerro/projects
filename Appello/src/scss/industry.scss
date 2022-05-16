@@ -1,0 +1,39 @@
+.industry {
+    width: 100%;
+    padding: rem(150) 0;
+    background: #FAFAFA;
+    position: relative;
+    &__content{
+        max-width: rem(520);
+        margin: 0 auto;
+        text-align: center;
+    } 
+    
+    &__title {
+        color: #000;
+        font-size: rem(41);
+        line-height: rem(50);
+        margin-bottom: rem(35);
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: rem(30);
+        color: #737373;
+        margin-bottom: rem(45);
+    }
+
+    &__img-block {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue("column-gap",30,5);
+        row-gap: rem(30);
+    }
+
+    &__img {
+        width: rem(94);
+        height: rem(94);
+    }
+}

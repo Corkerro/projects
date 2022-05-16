@@ -1,0 +1,110 @@
+.wayn {
+    &__title {
+        font-size: rem(41);
+        line-height: rem(50);
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: rem(35);
+        color: #737373;
+        font-size: rem(12);
+        line-height: rem(30);
+        text-align: center;
+    }
+
+    &__tabs {
+        margin-bottom: rem(65);
+    }
+
+    &__tabs-nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: rem(460);
+        flex-wrap: wrap;
+        @include adaptiveValue("column-gap",100,10)
+    }
+    &__tabs-nav>._tab-active{
+        color: #0a8bfe;
+    }
+    &__tabs-title {
+        margin-top: rem(60);
+        font-size: rem(23);
+        line-height: rem(38);
+    }
+
+    &__tabs-content {
+        margin-top: rem(50);
+    }
+
+    &__tabs-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: rem(40);
+        @include adaptiveValue("column-gap",40,10)
+    }
+
+    &__tabs-card {
+        
+        width: 48.27%;
+        border: 1px solid #E8E8E8;
+        box-sizing: border-box;
+        border-radius: 0px;
+
+    }
+    &__tabs-card-title{
+        font-size: rem(19);
+        line-height: rem(28);
+    }
+    &__tabs-card-subtitle{
+        margin-top: rem(23);
+        color: #737373;
+        font-size: rem(16);
+        line-height: rem(30);
+        
+    }
+
+    &__btn{
+        width: 100%;
+        padding: rem(15) 0;
+        text-align: center;
+        &-href{
+            background: #0A8BFE;
+            border-radius: 4px;
+            font-size: rem(15);
+            line-height: rem(30);
+            padding: rem(15) rem(49);
+            color: #fff;
+            border: rem(1) solid rgba(255, 255, 255, 0);
+            &:hover{
+                border: rem(1) solid #000;
+                box-sizing: border-box;
+                background:rgba(255, 255, 255, 0);
+                color: #000;
+            }
+        }
+    }
+}
+@media only screen and (min-width: rem(789)){
+    .wayn{
+        &__tabs-card{
+            padding: rem(40) rem(60) rem(40) rem(40);
+        }
+        &__tabs-card-subtitle{
+            height: rem(90);
+        }
+    }
+}
+@media only screen and (max-width: rem(788)){
+    .wayn{
+        &__tabs-card{padding: rem(40) rem(60);
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+

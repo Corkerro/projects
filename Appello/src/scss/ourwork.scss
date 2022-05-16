@@ -1,0 +1,60 @@
+.ourwork {
+    margin-top: rem(150);
+    height: rem(830);
+    padding-top: rem(150);
+    background: #0E0E33;
+    color: #fff;
+    &__title {
+        text-align: center;
+        font-size: rem(41);
+        line-height: rem(50);
+    }
+
+    &__cards-main {
+        margin-top: rem(80);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: rem(30);
+        @include adaptiveValue("column-gap",140,40)
+    }
+
+    &__card-title {
+        font-size: rem(42);
+        line-height: rem(50);
+    }
+
+    &__card-subtitle {
+        margin-top: rem(15);
+        font-size: rem(11);
+        line-height: rem(30);
+    }
+}
+@media only screen and (max-width: rem(1034)){
+    .ourwork{
+        height: rem(930);
+        &__card-title,&__card-subtitle{
+            text-align: center;
+        }
+    }
+}
+@media only screen and (max-width: rem(461)){
+    .ourwork{
+        height: rem(1000);
+        
+    }
+}
+@media only screen and (max-width: rem(408)){
+    .ourwork{
+        height: rem(1300);
+        &__cards-main{
+            
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            
+            flex-direction: column;
+        }   
+    }
+}

@@ -1,0 +1,90 @@
+.faq {
+    padding: rem(150) 0;
+    background: #FAFAFA;
+    margin-top: rem(160);
+    &__title {
+        font-size: rem(42);
+        line-height: rem(50);
+        text-align: center;
+        margin-bottom: rem(35);
+    }
+
+    &__subtitle {
+        color: #737373;
+        text-align: center;
+        font-size: 13px;
+        line-height: rem(30);
+        
+    }
+
+    &__href {
+        color: #0A8BFE;
+        margin-bottom: rem(50);
+        &:hover{
+            color: #000;
+        }
+    }
+
+    &__spollers {
+        margin-top: rem(50);
+        z-index: 1;
+    }
+
+    &__spollers-item {
+        width: 100%;
+        border-bottom: 1px solid #E8E8E8;
+    }
+    &__spollers-title {
+        &-text{
+            padding-right: rem(40);
+        }
+        width: 100%;
+
+        text-align: left;
+        font-size: rem(19);
+        line-height: rem(24);
+        padding: rem(38) 0;
+        position: relative;
+        &::before{
+            content:'';
+            width: rem(20);
+            background-color: #000;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(-90deg);
+            position: absolute;
+            right: rem(15);
+            top: 50%;
+            transition: transform .3s ease 0s;
+        }
+        &::after{
+            content:'';
+            width: rem(20);
+            background-color: #000;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(0deg);
+            position: absolute;
+            right: rem(15);
+            top: 50%;
+            transition: transform .3s ease 0s;
+        }
+        &._spoller-active{
+            &::before{
+                content:'';
+                transform: translate(0,-50%) rotate(135deg);
+            }
+            &::after{
+                content:'';
+                transform: translate(0,-50%) rotate(-135deg);
+            }
+        }
+    }
+
+    &__spollers-body {
+        color: #737373;
+        font-size: 13px;
+        line-height: rem(30); 
+    }
+}
+.spoller__txt{
+    padding-right: rem(50);  
+}

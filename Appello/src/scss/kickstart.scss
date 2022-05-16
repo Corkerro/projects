@@ -1,0 +1,155 @@
+.kickstart {
+    margin-top: rem(150);
+    &__title {
+        text-align: center;
+        font-size: rem(41);
+        line-height: rem(50);
+        margin-bottom: rem(35);
+    }
+    &__subtitle {
+        margin-top: rem(35);
+        color: #737373;
+        font-size: rem(11);
+        text-align: center;
+        max-width: rem(700);
+        margin: 0px auto;
+        margin-bottom: rem(73);
+    }
+    &__swiper{
+        position: relative;
+        z-index: 6 !important;
+    }
+    &__slide {
+        padding-top: rem(30);
+        padding-bottom: rem(30);
+    }
+    
+    &__slide-href {
+        color: #0a8bfe;
+        text-align: center;
+        font-size: rem(15);
+        line-height: rem(30);
+        padding: rem(16) rem(40);
+        border: 2px solid #E8E8E8;
+        box-sizing: border-box;
+        border-radius: 30px;
+    }
+}
+.more{
+
+    &__item_next{
+        width: rem(8);
+        z-index: 10 !important;
+        position: relative;
+        left: 80%;
+        top: rem(-78);
+        height: rem(8);
+        padding: rem(30);
+        border: 2px solid #E8E8E8;
+        box-sizing: border-box;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    &__item-rigth{
+        z-index: 10 !important;
+        position: absolute;
+        top:50%;
+        right: 40%;
+        
+        &::before{
+            content:'';
+            width: rem(10);
+            background-color: #000;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(45deg);
+            position: absolute;
+            right: rem(15);
+            top: rem(-4);
+            transition: transform .3s ease 0s;
+            right: 50%;
+        }
+        &::after{
+            content:'';
+            width: rem(10);
+            background-color: #000;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(-45deg);
+            position: absolute;
+            top: rem(3);
+            right: 50%;
+            transition: transform .3s ease 0s;
+        }
+    }
+    &__item_prev{
+        top: rem(-142);
+        width: rem(8);
+        z-index: 10 !important;
+        position: relative;
+        left: 20%;
+        height: rem(8);
+        padding: rem(30);
+        border: 2px solid #E8E8E8;
+        box-sizing: border-box;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    &__item-left{
+        top: 50%;
+        position: absolute;
+        left: 40%;
+        
+        &::before{
+            content:'';
+            width: rem(10);
+            background-color: #000;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(-45deg);
+            position: absolute;
+            right: rem(15);
+            top: rem(-4);
+            transition: transform .3s ease 0s;
+            left: 50%;
+        }
+        &::after{
+            content:'';
+            width: rem(10);
+            background-color: #000;
+            height: rem(2);
+            top: rem(3);
+            transform: translate(0,-50%) rotate(45deg);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transition: transform .3s ease 0s;
+        }
+    }
+}
+
+.swiper__nav{
+    z-index: 5 !important;
+
+    margin: 0px auto;
+    max-width: rem(1390);
+    z-index: 5;
+    top: rem(-78);
+    padding-bottom: rem(300);
+}
+@media only screen and (min-width: rem(500)){
+    .kickstart{
+        &__swiper{
+            padding-left: rem(50);
+        }
+    }
+}
+@media only screen and (max-width: rem(499)){
+    .kickstart{
+        &__slide-href{
+            margin-left: 35%;
+        }
+        &__slider{
+            position: relative;
+            left: rem(-30);
+        }
+    }
+}
