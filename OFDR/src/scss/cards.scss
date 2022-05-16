@@ -1,0 +1,42 @@
+.cards {
+    margin-top: rem(40);
+    &__title {
+        font-weight: 800;
+        font-size: rem(36);
+        text-align: center;
+        padding-bottom: rem(80);
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: rem(20);
+        @include adaptiveValue("column-gap",20,10);
+    }
+
+    &__card {
+        padding: rem(32) rem(70);
+        background: #FFFFFF;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.0677994);
+        &:hover{
+            box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__img {
+        width: rem(65);
+        height: rem(65);
+        margin-left: rem(30);
+        margin-bottom: rem(20);
+    }
+
+    &__card-text {
+        width: rem(135);
+        text-align: center;
+        font-weight: 400;
+        font-size: rem(16);
+        height: rem(20);
+    }
+}
