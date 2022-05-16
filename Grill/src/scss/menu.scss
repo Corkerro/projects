@@ -1,0 +1,101 @@
+.menu {
+    margin-top: rem(62);
+    padding-top: rem(40);
+    width: 100%;
+    padding-bottom: rem(60);
+    background: url(../img/2/Background.png)center no-repeat;
+    background-size: cover;
+    &__title{
+        text-align: center;
+        color: #fff;
+        font-size: rem(32);
+        font-weight: 800;
+    }
+
+    &__imgs {
+        display:flex;
+        margin-top: rem(30);
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',100,20);
+        @media only screen and (max-width: rem(1276)){
+            display: none;
+        }
+    }
+
+    &__img{
+        width: rem(353);
+    }
+
+    &__flexbox {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',100,20);
+        row-gap: rem(52);
+        
+    }
+
+    &__card {
+        margin-top: rem(58);
+        border: rem(6) solid $yellowColor;
+        @include adaptiveValue("width",353,310)
+        
+    }
+    &__card-title {
+        text-transform: uppercase;
+        color: $blackColor;
+        font-size: rem(28);
+        font-weight: 800;
+        background-color: $yellowColor;
+        width: 100%;
+        padding: rem(23) rem(11);
+    }
+
+    &__card-content {
+        padding: rem(26) rem(12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiveValue("width",340,300);
+        align-items: center;
+        margin: 0px auto;
+        
+        margin-bottom: rem(23);
+        &:last-child{
+            margin: 0;
+        }
+    }
+
+    &__card-content-text {
+        font-size: rem(16);
+        font-weight: bold;  
+        color: #fff;
+    }
+
+    &__card-content-price {
+        font-size: rem(16);
+        font-weight: bold;  
+        color: #fff;
+        &::after{
+            content:',00';
+            
+        }
+    }
+    &__card-content-price-dr{
+        font-size: rem(16);
+        font-weight: bold;  
+        color: #fff;
+        &::after{
+            content:',50';
+            
+        }
+    }
+
+}
+
+
+
+
