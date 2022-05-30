@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../../fonts/icomoon.eot?8bb9lw');
+	src:  url('../../fonts/icomoon.eot?8bb9lw#iefix') format('embedded-opentype'),
+	  url('../../fonts/icomoon.ttf?8bb9lw') format('truetype'),
+	  url('../../fonts/icomoon.woff?8bb9lw') format('woff'),
+	  url('../../fonts/icomoon.svg?8bb9lw#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
+  
+  [class^="_icon-"]::before, [class*=" _icon-"]::before {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  ._icon-logo:before {
+	content: "\e905";
+  }
+  ._icon-twitter:before {
+	content: "\e900";
+  }
+  ._icon-youtube:before {
+	content: "\e901";
+  }
+  ._icon-discord:before {
+	content: "\e902";
+  }
+  ._icon-linked-in:before {
+	content: "\e903";
+  }
+  ._icon-telegram:before {
+	content: "\e904";
+  }
+  

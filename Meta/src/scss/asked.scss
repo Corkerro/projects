@@ -1,0 +1,103 @@
+.asked {
+    position: relative;
+    top: rem(-200);
+    @media only screen and (max-width: rem(520)){
+        top: rem(-100);
+    }
+    &__container {
+        display:flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',200,40);
+        row-gap: rem(30);
+        
+    }
+    &__leftSide-img{
+        max-width: rem(360);
+    }
+    &__leftSide-title {
+        @media only screen and (max-width: rem(1085)){
+            text-align: center;
+        }
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(38);
+        line-height: rem(45);
+        /* identical to box height, or 120% */
+        
+        text-transform: uppercase;
+        & span{
+            color: #A8A8A8;
+
+        }
+        margin-bottom: rem(50);
+    }
+
+    &__rightSide {
+        width: rem(515);
+        background: #222222;
+        //@include adaptiveValue("height", 545, 610);
+        overflow: hidden;
+        padding: rem(20);
+        text-align-last: left;
+    }
+
+    &__spollers-title {
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(24);
+        padding-top: rem(10);
+        text-align: left;
+        padding-bottom: rem(10);
+        width: 100%;
+        position: relative;
+        &::before{
+            content:'';
+            width: rem(20);
+            background-color: #fff;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(-90deg);
+            position: absolute;
+            right: rem(15);
+            top: 50%;
+            transition: transform .3s ease 0s;
+        }
+        &::after{
+            content:'';
+            width: rem(20);
+            background-color: #fff;
+            height: rem(2);
+            transform: translate(0,-50%) rotate(0deg);
+            position: absolute;
+            right: rem(15);
+            top: 50%;
+            transition: transform .3s ease 0s;
+        }
+        &._spoller-active{
+            &::before{
+                content:'';
+                transform: translate(0,-50%) rotate(135deg);
+            }
+            &::after{
+                content:'';
+                transform: translate(0,-50%) rotate(-135deg);
+            }
+        }
+    }
+
+    &__spollers-body {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: rem(19);
+        /* or 160% */
+        
+        color: #C4C4C4;
+        margin-bottom: rem(14);
+    }
+}

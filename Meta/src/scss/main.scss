@@ -1,0 +1,117 @@
+.page{
+    top: rem(100);
+    position: relative;
+    z-index: 38;
+}
+.main {
+    margin-bottom: rem(40);
+    position: relative;
+    
+    &__container {
+        max-width: rem(1450);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap:rem(80);
+        
+        
+    }
+
+    &__leftSide {
+        width: rem(480);
+        @media only screen and (max-width: rem(1440)){
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-family: 'Audiowide';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(51);
+        line-height: rem(61);
+        
+        text-transform: uppercase;
+        margin-bottom: rem(40);
+    }
+
+    &__subtitle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(26);
+        margin-bottom: rem(130);
+        @media only screen and (max-width: rem(1440)){
+            margin-bottom: rem(40);
+        }
+    }
+
+    &__href {
+        padding: rem(17) rem(40);
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(16);
+        /* identical to box height, or 100% */
+        
+        text-align: center;
+        text-transform: capitalize;
+        
+        color: #000000;
+        background: #8DFD1B;
+        transition: all .3s linear;
+        &:hover{
+            background: #fff;
+        }
+    }
+
+    &__rightSide {
+        display: block;
+    }
+
+    &__slider {
+        height: rem(340) !important;
+        max-width: rem(900) !important;
+        
+    }
+
+    &__swiper {
+        display: flex !important;
+        align-items: center !important;
+        position: relative;
+        height: rem(340) !important;
+    }
+
+    &__slide {
+        z-index: 4;
+    }
+
+    &__slide-img {
+        width: 70%;
+        display: block;
+        margin: 0px auto;
+        opacity: .5;    
+        transition: all .8s linear;
+    }
+}
+
+
+
+.swiper-slide-active{
+    z-index: 6;
+}
+.swiper-slide-active img{
+    display: block;
+    margin: 0px auto;
+    transform: scale(1.42);
+    opacity: 1;
+}
+.swiper-slide-prev img{
+    display: block;
+    margin: 0px auto;
+    transform: scale(1);
+}

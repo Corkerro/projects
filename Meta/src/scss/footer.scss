@@ -1,0 +1,109 @@
+.footer {
+    padding: rem(70) 0 rem(30);
+    background: #42006A;
+    position: relative;
+    bottom: rem(-40);
+    margin-top: rem(100);
+    &__container {
+        display:flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        row-gap: rem(30);
+        @media only screen and (max-width: rem(780)){
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__firstblock {
+        font-size: rem(32);
+        transition: all .3s linear;
+        &:hover{
+			color: #8dfd1b;
+		}
+    }
+    &__href {
+        position: relative;
+		transition: all .2s linear;
+		&:hover{
+			color: #8dfd1b;
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: rem(-3);
+			width: 0;
+			height: rem(2); /* Высота линии */
+			background-color: #fff; /* Цвет подчеркивания при исчезании линии*/
+			transition: width 0.2s; /* Время эффекта */
+		}
+		&:hover::after{
+			content: "";
+			width: 100%;
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: rem(-3);
+			height: rem(2); /* Высота линии */
+			background-color: #8DFD1B; /* Цвет подчеркивания при появлении линии*/
+			transition: width 0.2s;  /* Время эффекта */
+		}
+    }
+
+    &__secondblock, &__thirdblock {
+        display: flex;
+        flex-flow: column;
+        row-gap: rem(30);
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(19);
+    }
+
+    &__forthblock {
+        display: flex;
+        flex-flow: column;
+        row-gap: rem(30);
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: rem(15);
+    }
+
+    &__text {
+    }
+
+    &__socialblock {
+    }
+
+    &__socialblock-nav {
+        display: flex;
+        column-gap:rem(10);
+        
+    }
+
+    &__socialblock-nav-href {
+        font-size: rem(19);
+		padding: rem(8);
+		color: #000;
+		background-color: #fff;
+		transition: all .3s linear;
+		&:hover{
+			background-color: #8DFD1B;
+		}
+    }
+
+    &__allright {
+        margin-top: rem(40);
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: rem(20);
+        text-align: center;
+    }
+}

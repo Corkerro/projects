@@ -1,0 +1,120 @@
+.nft {
+    @include adaptiveValue("margin-top", 115, 140);
+    @include adaptiveValue("margin-bottom", 115, 40);
+    &__container {
+        padding-bottom: rem(70);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',20,5);
+        @media only screen and (max-width: rem(1060)){
+            flex-flow: column;
+            row-gap: rem(30);
+        }
+    }
+
+    &__leftSide {
+    }
+
+    &__leftSide-title {
+        @media only screen and (max-width: rem(1060)){
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+        }
+        font-family: 'Audiowide';
+        margin-left: rem(65);
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(38);
+        line-height: rem(45);
+        /* identical to box height, or 120% */
+        width: rem(350);
+        margin-bottom: rem(40);
+        text-transform: uppercase;
+        & span{
+            color: #A8A8A8;
+        }
+    }
+
+    &__leftSide-img {
+        width: rem(360);
+        @media only screen and (max-width: rem(1060)){
+            display: block;
+            margin: 0px auto;
+            width: 100%;
+        }
+    }
+
+    &__rigthSide {
+        max-width: rem(580);
+        @media only screen and (max-width: rem(1060)){
+            width: 100%;
+
+        }
+    }
+
+    &__rightSide-title {
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(21);
+        line-height: rem(32);
+        /* or 152% */
+        padding-left: rem(22);
+        
+        color: #8DFD1B;
+        border-left: rem(2) solid;
+        @media only screen and (max-width: rem(1060)){
+            text-align: center;
+        }
+    }
+
+    &__rightSide-textblock {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-flow: column;
+        @include adaptiveValue('row-gap',18,9);
+        margin-top: rem(32);
+        margin-bottom: rem(33);
+    }
+
+    &__rigthSide-text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(26);
+        @media only screen and (max-width: rem(1060)){
+            text-align: center;
+        }
+    }
+
+    &__rightSide-href {
+        padding: rem(13) rem(33);
+        border: rem(1) solid #8DFD1B;
+        border-radius: 0px;
+        font-family: 'DM Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: rem(16);
+        /* identical to box height, or 100% */
+        transition: all .3s linear;
+        text-align: center;
+        text-transform: capitalize;
+        @media only screen and (max-width: rem(1060)){
+            display: block;
+            margin: 0px auto;
+            max-width: rem(320);
+        }
+        &:hover{
+            color: #000;
+            background-color: #8DFD1B;
+        }
+    }
+}
+
