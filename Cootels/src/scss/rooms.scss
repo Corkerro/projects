@@ -1,0 +1,119 @@
+.rooms {
+    margin-top: rem(80);
+    &__container {
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(24);
+    }
+
+    &__subtitle {
+        max-width: rem(590);
+        text-align: center;
+        margin: 0px auto ;
+        margin-bottom: rem(32);
+    }
+
+    &__button {
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        max-width: rem(165);
+    }
+
+    &__cardsBlock {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',18,10);
+        margin-top: rem(75);
+        row-gap: rem(48);
+    }
+
+    &__cardsBlock-card {
+        width: rem(385);
+        @media only screen and (max-width: rem(830)){
+            width: 100%;
+            text-align: center;
+            & *{
+                margin: 0px auto;
+            }
+        }
+    }
+
+    &__cardsBlock-card-imgblock {
+    }
+
+    &__cardsBlock-card-img {
+        width: rem(385);
+        @media only screen and (max-width: rem(830)){
+            width: 100%;
+            max-width: rem(400);
+        }
+    }
+
+    &__cardsBlock-card-title {
+        margin-top: rem(32);
+        margin-bottom: rem(16);
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(24);
+        line-height: 150%;
+        /* identical to box height, or 36px */
+
+        color: #000000;
+        
+    }
+
+    &__cardsBlock-card-text {
+        margin-bottom: rem(32);
+        max-width: rem(540);
+    }
+
+    &__cardsBlock-card-href {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%; 
+        color: #424F7B;
+        position: relative;
+		transition: all .2s linear;
+        &:hover{
+            color: #192252;
+        }
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: rem(-3);
+			width: 0;
+			height: rem(2); /* Высота линии */
+			background-color: #848FAC; /* Цвет подчеркивания при исчезании линии*/
+			transition: width 0.2s; /* Время эффекта */
+		}
+		&:hover::after{
+			content: "";
+			width: 100%;
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: rem(-3);
+			height: rem(2); /* Высота линии */
+			background-color: #192252; /* Цвет подчеркивания при появлении линии*/
+			transition: width 0.2s;  /* Время эффекта */
+		}
+    }
+}
+.text {
+
+    &__block-title {
+    }
+
+    &__block-text {
+    }
+}
