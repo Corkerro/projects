@@ -1,0 +1,65 @@
+.main {
+    background: url(../img/main/main_bg.png) center no-repeat;
+    background-size: cover;
+    height: 850px;
+    &__container {
+    }
+    padding-top: 190px;
+    @media only screen and (max-width: rem(545)){
+        text-align: center;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 64, 33);
+        @include adaptiveValue("line-height", 80, 45);
+        /* or 125% */
+        
+        text-transform: uppercase;
+        @include adaptiveValue("max-width", 905, 335);
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: rem(25);
+        @include adaptiveValue("font-size", 18, 16);
+        @include adaptiveValue("line-height", 25, 22);
+        color: #FFFFFF;
+        max-width: rem(540);     
+        margin-bottom: 70px;   
+    }
+
+    &__btn {
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: rem(22);
+        /* identical to box height */
+
+        
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 17px;
+        background: #FFD200;
+        border-radius: 5px;
+        max-width: 250px;
+        transition: all .3s linear;
+		position: relative;
+        @media only screen and (max-width: rem(545)){
+            margin: 0px auto;
+        }
+		&:hover{
+            background: #fff;
+        }
+    }
+
+    &__btn-img {
+        
+    }
+}

@@ -1,0 +1,148 @@
+.form {
+    background: #FFD300;
+    @include adaptiveValue("padding-top", 110, 75);
+    @include adaptiveValue("padding-bottom", 110, 70);
+    position: relative;
+    &::before{
+        content: url('../img/from/from_left.svg');
+        position: absolute;
+        left: 0;
+        bottom: 10.4%;
+        z-index: 2;
+        width: 16%;
+        @media only screen and (max-width: rem(900)){
+            display: none;
+        }
+    }
+    &::after{
+        content: url('../img/from/from_right.svg') ;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 29%;
+        z-index: 2;
+        width: 16%;
+        @media only screen and (max-width: rem(900)){
+            display: none;
+        }
+    }
+    &__container {
+        position: relative;
+        z-index: 4;
+    }
+    &__title{
+        max-width: rem(695);
+        margin: 0px auto;
+        font-style: normal;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 45, 30);
+        @include adaptiveValue("line-height", 55, 35);
+        /* or 122% */
+        
+        text-align: center;
+        
+        color: #17181C;
+        margin-bottom: rem(50);
+    }
+    &__form {
+        width: rem(695);
+        margin: 0px auto;
+        @media only screen and (max-width: rem(1550)){
+            width: 100%;
+        }
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        @media only screen and (max-width: rem(1525)){
+            flex-flow: column;
+            align-items: center;
+        }
+        gap: rem(40);
+        &-text{
+            margin-left: rem(28);
+            font-style: normal;
+            font-weight: 500;
+            font-size: rem(14);
+            line-height: rem(19);
+            margin-bottom: rem(10);
+            
+            color: #17181C;
+            
+        }
+        &-input{
+            width: rem(350);
+            padding: rem(24) rem(38);
+            background: #FFFFFF;
+            border-radius: 5px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: rem(16);
+            line-height: rem(22);
+            color: #17181C;
+            height: rem(66);
+            &::placeholder{
+                font-style: normal;
+                font-weight: 700;
+                font-size: rem(16);
+                line-height: rem(22);
+                
+                color: #17181C;
+            }
+            
+        }
+        &-btn{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+
+            color: #FFFFFF;
+            cursor: pointer;
+            padding: rem(23) rem(53);
+            height: rem(66);
+            width: rem(250);
+            text-align: center;
+            background: #17181C;
+            border-radius: 5px;
+            transition: all .3s linear;
+            &:hover{
+                background: #fff;
+                color: #000;
+            }
+            position: relative;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: rem(-3);
+                width: 0;
+                height: rem(2); /* Высота линии */
+                background-color: #fff; /* Цвет подчеркивания при исчезании линии*/
+                transition: width 0.2s; /* Время эффекта */
+            }
+            &:hover::after{
+                content: "";
+                width: 100%;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: rem(-3);
+                height: rem(2); /* Высота линии */
+                background-color: #FFD300; /* Цвет подчеркивания при появлении линии*/
+                transition: width 0.2s;  /* Время эффекта */
+            }
+        }
+    }
+
+    &__form-text {
+    }
+
+    &__form-input {
+    }
+
+    &__form-btn {
+    }
+}

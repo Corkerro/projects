@@ -1,0 +1,183 @@
+//====================================================================================================
+.footer {
+    margin-top: 120px;
+    position: relative;
+    background: #17181c;
+    overflow: hidden;
+    & *{
+        z-index: 6;
+    }
+    & hr{
+        width: 100%;
+        height: 1px;
+        background: #FFFFFF;
+        opacity: 0.4;
+        margin-top: rem(36);
+        margin-bottom: rem(18);
+    }
+    &__text{
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: rem(16);
+        text-align: center;
+        
+        color: #FFFFFF;
+    }
+    &::before{
+        z-index: 2;
+        content: url('../img/footer/Frame.png');
+        /* В любом случае необходим, даже пустой. Иначе не будет работать */
+        z-index: 2;
+        position: absolute;
+        right: 60px;
+        top: -165px;
+        width: 1368px;
+        height: 256px;
+        @media only screen and (max-width: rem(1550)){
+            width: 70%;
+            height: auto;
+            right: 20%;
+        }
+        @media only screen and (max-width: rem(980)){
+            width: 150%;
+            height: auto;
+            right: -120px;
+        }
+    }
+    padding: rem(114) 0 rem(25);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(30);
+        align-items: center;
+        @media only screen and (max-width: rem(980)){
+            flex-flow: column;
+            align-items: center;
+            padding-top: rem(100);
+        }
+    }
+
+
+    &__logo {
+        margin-top: rem(-100);
+    }
+
+    &__logo-img {
+    }
+
+    &__midle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        flex-flow: column;
+        align-items: flex-end;
+        @media only screen and (max-width: rem(980)){
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__midle-nav {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(16);
+        line-height: rem(22);
+        
+        color: #FFFFFF;
+        
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: rem(550)){
+            flex-flow: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    &__midle-nav-href {
+        transition: all .3s linear;
+        &:hover{
+            color: #ffd300;
+        }
+    }
+
+    &__midle-down {
+        display: flex;
+        width: 135px;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: rem(550)){
+            margin-top: rem(25);
+            margin-bottom: rem(25);
+        }
+    }
+
+    &__midle-down-href {
+    }
+
+    &__midle-down-href-img {
+    }
+
+    &__rightSide {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        gap: 19px;
+        @media only screen and (max-width: rem(980)){
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__rightSide-up {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(18);
+        line-height: rem(25);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFD300;
+        transition: all .3s linear;
+        //&:hover{
+        //    color: #fff;
+        //}
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__rightSide-up-img {
+    }
+
+    &__rightSide-btn {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(14);
+        line-height: rem(19);
+        text-align: center;
+        
+        color: #FFD200;
+
+        padding: rem(12) rem(30);
+        border: 1px solid #FFD200;
+        border-radius: 5px;
+        transition: all .3s linear;
+        &:hover{
+            color: #17181c;
+            background-color: #FFD200;
+        }
+    }
+}
+
+//====================================================================================================

@@ -22,6 +22,7 @@
 		color: #192252;
 		position: relative;
 		transition: all .2s linear;
+		max-width: rem(253);
 		&::after{
 			content: "";
 			display: block;
@@ -177,9 +178,11 @@ html{
 	.menu__list{
 		position: relative;
 		top: 30%;
+		padding: rem(30);
 
 	}
 	.menu__body{
+		
 		display: block;
 		position: absolute;
 		width: 100%;
@@ -195,7 +198,6 @@ html{
 		}
 	}
 	li{
-		width: 100%;
 		text-align: center;
 	}
 }
@@ -258,6 +260,8 @@ html{
 		color: #FFFFFF;
 		background: #0E1734;
 		border-radius: rem(4);
+		max-width: rem(320);
+		margin: 0 auto;
 		&:hover{
 			background: #FFFFFF;
 			color: #0e1734;

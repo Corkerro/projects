@@ -1,0 +1,75 @@
+.otzivi {
+    @include adaptiveValue("margin-top", 90, 55);
+    &__title {
+        font-style: normal;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 45, 30);
+        @include adaptiveValue("line-height", 55, 35);
+        /* or 122% */
+        
+        text-align: center;
+        text-transform: uppercase;
+        
+        color: #17181C;
+        
+    }
+
+    &__container {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(20);
+        margin-top: rem(30);
+        @media only screen and (max-width: rem(1100)){
+            flex-flow: column;
+        }
+    }
+
+    &__card {
+        width: rem(520);
+        @media only screen and (max-width: rem(600)){
+            width: 100%;
+        }
+    }
+
+    &__card-video {
+        background: #C4C4C4;
+        border-radius: 5px;
+        width: 100%;
+        height: rem(255);
+        position: relative;
+    }
+
+    &__card-video-play {
+        position: absolute;
+        left: 45%;
+        top: 38.5%;
+    }
+
+    &__card-title {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(22);
+        line-height: rem(55);
+        /* or 250% */
+        
+        
+        color: #000000;
+        
+    }
+
+    &__card-text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: rem(18);
+        line-height: rem(55);
+        /* or 306% */
+        
+        display: flex;
+        align-items: center;
+        margin-top: rem(-30);
+        color: #000000;
+        
+    }
+}

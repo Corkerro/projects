@@ -1,0 +1,49 @@
+.dop {
+    @include adaptiveValue("margin-top", 95, 45);
+    &__title{
+        font-style: normal;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 45, 30);
+        @include adaptiveValue("line-height", 55, 35);
+        /* or 122% */
+        
+        text-align: center;
+        text-transform: uppercase;
+        
+        color: #17181C;
+        @include adaptiveValue("margin-bottom", 70, 30);
+    }
+    &__container {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',100,40);
+        @media only screen and (max-width: rem(800)){
+            flex-flow: column-reverse;
+            row-gap: rem(40);
+        }
+        
+    }
+
+    &__img {
+        max-width: rem(375);
+    }
+
+    &__ul {
+        
+    }
+
+    &__li {
+        list-style-type: disc;
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 22, 20);
+        line-height: rem(35);
+        /* or 159% */
+        
+        
+        color: #17181C;
+        
+    }
+}

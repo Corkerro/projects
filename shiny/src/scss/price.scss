@@ -1,0 +1,225 @@
+.price {
+    @include adaptiveValue("margin-top", 90, 40);
+    &__title {
+        max-width: 660px;
+        margin: 0px auto;
+        font-style: normal;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 45, 30);
+        @include adaptiveValue("line-height", 55, 35);
+        /* or 122% */
+        
+        text-align: center;
+        
+        color: #17181C;
+        @include adaptiveValue("margin-bottom", 70, 20);
+    }
+    &__container {
+    }
+
+    &__range {
+        max-width: 655px;
+        margin: 0px auto;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue('column-gap',40,20);
+        @media only screen and (max-width: rem(760)){
+            justify-content: space-around;
+            gap: 10px;
+        }
+        
+        &-text{
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(16);
+            line-height: rem(22);
+            
+            color: #000000;
+            
+            opacity: 0.5;
+        }
+        &-block{
+            width: 455px;
+            
+            @media only screen and (max-width: rem(760)){
+                display: none;
+            }
+            &-type{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+            &-text{
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 25px;
+                
+                color: #000000;
+                
+                opacity: 0.5;
+                cursor: pointer;
+                &-bold{
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 18px;
+                    line-height: 25px;
+                    
+                    color: #000000;
+                    opacity: 1;
+                }
+            }
+        }
+        &-select{
+            
+            font-style: normal;
+            width: 180px;
+            font-weight: 800;
+            font-size: rem(16);
+            line-height: rem(22);
+            
+            color: #000000;
+            padding: rem(15) rem(12);
+            background: #E5E5E5;
+            border-radius: 5px;
+            & option{
+                opacity: 0.5;
+            }
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            outline: none;
+            cursor: pointer;
+            &-arrow{
+                position: relative;
+                @media only screen and (min-width: rem(760)){
+                    display: none;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 8px;
+                    height: 2px;
+                    border-radius: 50%;
+                    right: 10px;
+                    top: 24px;
+                    -webkit-transform: translate(0,-50%) rotate(-45deg);
+                    -ms-transform: translate(0,-50%) rotate(-45deg);
+                    transform: translate(0,-50%) rotate(-45deg);
+                    position: absolute;
+                    background: #000;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 8px;
+                    height: 2px;
+                    border-radius: 50%;
+                    right: 15px;
+                    top: 24px;
+                    -webkit-transform: translate(0,-50%) rotate(45deg);
+                    -ms-transform: translate(0,-50%) rotate(45deg);
+                    transform: translate(0,-50%) rotate(45deg);
+                    position: absolute;
+                    background: #000;
+                }
+            }
+        }
+    }
+
+    &__range-range {
+        width: 100%;
+        -webkit-appearance: none;
+        background: #EBE9E9;
+        border-radius: 5px;
+        height: 3px;
+        cursor: pointer;
+        &:active{
+            cursor: grab;
+        }
+        padding: 0 rem(20);
+        &::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            height: 29px;
+            width: 29px;
+            background-image: url('../img/form/choose.svg');
+        }
+    }
+
+    &__block {
+        max-width: rem(830);
+        width: 100%;
+        
+        display: flex;
+        flex-flow: column;
+        gap: 5px;
+        margin: 0px auto;
+        margin-top: 33px;   
+    }
+
+    &__block-row {
+        width: 100%;
+        padding: rem(2) 0;
+        @include adaptiveValue("padding-left", 30, 5);
+        @include adaptiveValue("padding-right", 30, 5);
+        background: rgba(23, 24, 28, 0.05);
+        @media only screen and (max-width: rem(600)){
+            background: none;
+        }
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__block-row-text {
+        font-style: normal;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 17, 15);
+        line-height: 45px;
+        /* or 265% */
+        
+        
+        color: #000000;
+        
+    }
+
+    &__block-row-price {
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 18, 15);
+        line-height: rem(45);
+        /* or 250% */
+        white-space: nowrap; 
+        padding-left: rem(10);
+        text-align: right;
+        
+        color: #000000;
+        
+    }
+    &__btn{
+        @include adaptiveValue("margin-top", 70, 55);
+        font-style: normal;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: rem(22);
+        /* identical to box height */
+        margin: 0px auto;
+        
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 17px;
+        background: #FFD200;
+        border-radius: 5px;
+        max-width: 250px;
+        transition: all .3s linear;
+		position: relative;
+        &:hover{
+            background: #fff;
+        }
+    }
+}

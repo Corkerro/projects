@@ -1,0 +1,167 @@
+.preimuschestvo {
+    @include adaptiveValue("padding-top", 95, 45);
+    z-index: 4;
+    background: url('../img/preimuschestvo/bg.png') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    @include adaptiveValue("padding-bottom", 230, 60);
+    &__container {
+        @include adaptiveValue("margin-top", 170, 70);
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;    
+        row-gap: rem(44);    
+    }
+    &__title{
+        font-style: normal;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 45, 30);
+        @include adaptiveValue("line-height", 55, 35);
+        /* or 122% */
+        max-width: rem(775);
+        margin: 0px auto;
+        text-align: center;
+        text-transform: uppercase;
+        
+        color: #17181C;
+        
+        
+    }
+
+    &__leftSide {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(20);
+        line-height: rem(23);
+        /* or 115% */
+        
+        
+        color: #17181C;
+        @media only screen and (max-width: rem(1070)){
+            width: 100%;   
+        }
+        & ul{
+            height: rem(400);
+            justify-content: space-between;
+            display: flex;
+            flex-flow: column;
+            row-gap: rem(25);
+            position: relative;
+            @media only screen and (max-width: rem(1070)){
+                width: 100%;
+            }
+            & li{
+                @media only screen and (max-width: rem(1070)){
+                    margin: 0px auto;
+                    text-align: center;
+                }
+                width: rem(320);
+                padding: rem(20) rem(25);
+                border-bottom: 1px dashed #000000;
+            }
+            &::after{
+                content: '';
+                top: rem(148);
+                position: absolute;
+                right: rem(-208);
+                border: 1px dashed #000000;
+                transform: rotate(44.33deg);
+                width: 243.26px;
+                height: 0px;
+                @media only screen and (max-width: rem(1070)){
+                    display: none;
+                }
+            }
+            &::before{
+                content: '';
+                top: rem(316);
+                position: absolute;
+                right: rem(-208);
+                border: 1px dashed #000000;
+                transform: matrix(0.74, -0.68, -0.68, -0.74, 0, 0);
+                width: 243.26px;
+                height: 0px;
+                @media only screen and (max-width: rem(1070)){
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__center {
+        margin-top: rem(20);
+        @media only screen and (max-width: rem(1070)){
+            width: 100%;
+        }
+    }
+
+    &__center-img {
+        position: relative;
+        z-index: 6;
+        @media only screen and (max-width: rem(1070)){
+            display: block;
+            margin: 0px auto;
+        }
+    }
+
+    &__rightSide {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(20);
+        line-height: rem(23);
+        /* or 115% */
+        position: relative;
+        
+        color: #17181C;
+        @media only screen and (max-width: rem(1070)){
+            width: 100%;
+            text-align: center;
+        }
+        & ul{
+            
+            display: flex;
+            flex-flow: column;
+            height: rem(400);
+            justify-content: space-between;
+            row-gap: rem(25);
+            @media only screen and (max-width: rem(1070)){
+                width: 100%;
+            }
+            & li{
+                @media only screen and (max-width: rem(1070)){
+                    margin: 0px auto;
+                }
+                width: rem(320);
+                padding: rem(20) rem(25);
+                border-bottom: 1px dashed #000000;
+            }
+            &::after{
+                content: '';
+                top: rem(148);
+                position: absolute;
+                right: rem(287);
+                border: 1px dashed #000000;
+                transform: matrix(-0.72, 0.7, 0.7, 0.72, 0, 0);
+                width: 243.26px;
+                height: 0px;
+                @media only screen and (max-width: rem(1070)){
+                    display: none;
+                }
+            }
+            &::before{
+                content: '';
+                top: 316px;
+                position: absolute;
+                right: rem(287);
+                border: 1px dashed #000000;
+                transform: rotate(-137.42deg);
+                width: 243.26px;
+                height: 0px;
+                @media only screen and (max-width: rem(1070)){
+                    display: none;
+                }
+            }
+        }
+    }
+}
