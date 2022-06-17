@@ -1,0 +1,73 @@
+.invest {
+    position: relative;
+    &::after{
+        z-index: 2;
+        content: '';
+        background: url('../img/invest/looper.svg');
+        width: 600px;
+        height: 1040px;
+        position: absolute;
+
+        @include adaptiveValue("top", 0, -200);
+        right: 0;
+    }
+    &__container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: rem(50);
+        line-height: 130%;
+        text-align: center;
+        max-width: rem(780);
+        position: relative;
+        @media only screen and (max-width: rem(840)){
+            font-size: rem(36);
+        }
+        &::after{
+            content: '';
+            z-index: 3;
+            background: url('../img/invest/star-img.svg');
+            width: 61px;
+            height: 60px;
+            position: absolute;
+            bottom: -26%;
+            right: -18%;
+            @media only screen and (max-width: rem(1100)){
+                right: 0;
+            }
+            @media only screen and (max-width: rem(700)){
+                content: none;
+            }
+        }
+        
+    }
+
+    &__text {
+        font-size: rem(16);
+        line-height: 150%;
+        text-align: center;
+        color: #898CA9;
+        margin-top: rem(16);
+        margin-bottom: rem(52);
+        max-width: rem(580);
+    }
+
+    &__btn {
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 100%;
+        transition: all .3s linear;
+        text-align: center;
+        padding: rem(20) rem(33);
+        position: relative;
+        z-index: 3;
+    }
+}

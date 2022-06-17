@@ -1,0 +1,109 @@
+.step {
+    margin-top: rem(200);
+    position: relative;
+    z-index: 5;
+    transform-style: preserve-3d;
+    &::before{
+        z-index: 2;
+        content: '';
+        position: absolute;
+        background: url('../img/buy/Looper.svg');
+        width: 600px;
+        height: 1483px;
+        top: -100vh;
+        transform: translateZ(-1px);
+
+    }
+    &__container {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(40);
+        @media only screen and (max-width: rem(1000)){
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            row-gap: rem(80);
+        }
+    }
+
+    &__left {
+        width: rem(580);
+        position: relative;
+        z-index: 6;
+        @media only screen and (max-width: rem(1000)){
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__left-title {
+        font-weight: 900;
+        font-size: rem(50);
+        line-height: 130%;
+        color: #FFFFFF;
+        @media only screen and (max-width: rem(800)){
+            font-size: rem(36);
+        }
+        
+    }
+
+    &__left-text {
+        font-size: rem(16);
+        line-height: 150%;
+        color: #898CA9;
+        margin-top: rem(16);
+        margin-bottom: rem(52);
+    }
+
+    &__left-btn {
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 100%;
+        transition: all .3s linear;
+        padding: rem(20) rem(33);
+    }
+
+    &__right {
+        position: relative;
+        &::before{
+            z-index: 1;
+            content: '';
+            transform: translateZ(-1px);
+            background: url('../img/step/bg-gradient-img.svg');
+            width: 1070px;
+            height: 1243px;
+            background-size: cover;
+            position: absolute;
+            top: -570px;
+            left: -90%;
+            @media only screen and (max-width: rem(1000)){
+                width: rem(545);
+                height: rem(623);
+                top: -180px;
+                left: -60%;
+            }
+        }
+        &::after{
+            z-index: 1;
+            content: '';
+            transform: translateZ(-1px);
+            background: url('../img/step/star.svg');
+            width: 126px;
+            height: 282px;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            right: -25%;
+        }
+    }
+
+    &__right-img {
+        position: relative;
+        z-index: 5;
+        max-width: rem(295);
+    }
+}

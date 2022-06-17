@@ -1,0 +1,176 @@
+.info {
+    margin-top: -70vh;
+    position: relative;
+    z-index: 7;
+    margin-bottom: rem(220);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(20);
+        row-gap: rem(30);
+        @media only screen and (max-width: rem(1230)){
+            justify-content: space-around;
+        }
+        @media only screen and (max-width: rem(1000)){
+            flex-flow: column;
+        }
+    }
+
+    &__card {
+        position: relative;
+        
+        &-star-1{
+            
+            &::before{
+                content: '';
+                background: url('../img/info/star-img.svg');
+                width: 95px;
+                height: 145px;
+                position: absolute;
+                bottom: -18%;
+                left: -18%;
+                @media only screen and (max-width: rem(530)){
+                    left: 0;
+                    z-index: 4;
+                }
+            }
+        }
+        &-star-2{
+            @media only screen and (max-width: rem(1000)){
+                &::before{
+                    content: '';
+                    background: url('../img/info/star-img-2.svg');
+                    width: 52px;
+                    height: 80px;
+                    position: absolute;
+                    bottom: -20%;
+                    right: -18%;
+                    @media only screen and (max-width: rem(530)){
+                        right: 0;
+                        z-index: 4;
+                    }
+                }
+            }
+        }
+        &-star-3{
+            @media only screen and (min-width: rem(1230)){
+                &::before{
+                    content: '';
+                    background: url('../img/info/star-img.svg');
+                    width: 95px;
+                    height: 145px;
+                    position: absolute;
+                    top: -20%;
+                    right: -18%;
+                }
+            }
+            @media only screen and (max-width: rem(1230)){
+                &::before{
+                    content: '';
+                    background: url('../img/info/star-img-2.svg');
+                    width: 52px;
+                    height: 80px;
+                    position: absolute;
+                    bottom: -20%;
+                    right: -18%;
+                }
+            }
+            @media only screen and (max-width: rem(1000)){
+                &::before{
+                    content: '';
+                    background: url('../img/info/star-img.svg');
+                    width: 95px;
+                    height: 145px;
+                    position: absolute;
+                    bottom: -20%;
+                    left: -18%;
+                    @media only screen and (max-width: rem(530)){
+                        left: 0;
+                        z-index: 4;
+                    }
+                }
+            }
+            
+        }
+        padding: rem(32) rem(24);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: rem(16);
+        max-width: rem(380);
+        background: #1A1B23;
+        border-radius: 25px;
+    }
+
+    &__card-img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__card-title {
+        font-weight: 800;
+        font-size: rem(32);
+        line-height: 130%;
+        /* identical to box height, or 42px */
+        
+        text-align: center;
+    }
+
+    &__card-text {
+        font-size: rem(16);
+        line-height: 150%;
+        /* or 24px */
+        
+        text-align: center;
+        
+        /* black/black-60 */
+        
+        color: #898CA9;
+        margin-bottom: rem(16);
+    }
+
+    &__card-href {
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 100%;
+        /* identical to box height, or 16px */
+        
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        
+        /* primary/purple */
+        
+        color: #B982FF;
+        transition: all .3s linear;
+        
+        background: linear-gradient(to left, #7000FF, #B982FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        &:hover{
+            background-position: right;
+        }
+        position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 0%;
+			height: 2px;
+			background: linear-gradient(to left, #7000FF, #B982FF);
+			border-radius: 10px;
+            background-size: 200%;
+			transition: width 0.35s;
+		}
+		&:hover::after{
+			width:100%;
+            background-position: right;
+		}
+    }
+}

@@ -1,0 +1,82 @@
+.service {
+    position: relative;
+    z-index: 10;
+    margin-top: rem(300);
+    @include adaptiveValue("margin-top", 300, 60);
+    &::before{
+        z-index: 2;
+        content: '';
+        background: url('../img/service/bg-gradient-img.png');
+        width: 668px;
+        height: 1143px;
+        position: absolute;
+        top: -440px;
+        left: 0;
+        @media only screen and (max-width: rem(1000)){
+            top: -120px;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media only screen and (max-width: rem(1000)){
+            flex-flow: column-reverse;
+        }
+    }
+    &__left{
+        position: relative;
+        
+        
+        &::after{
+            z-index: 2;
+            content: '';
+            background: url('../img/service/star-img.svg');
+            width: 74px;
+            height: 74px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__left-img {
+        max-width: rem(350);
+        position: relative;
+        z-index: 3;
+    }
+
+    &__rigth {
+        width: 580px;
+        position: relative;
+        @media only screen and (max-width: rem(1000)){
+            width: 100%;
+            max-width: rem(780);
+            margin-bottom: rem(60);
+            text-align: center;
+        }
+        z-index: 7;
+    }
+
+    &__rigth-title {
+        font-weight: 900;
+        font-size: rem(50);
+        line-height: 130%;
+        @media only screen and (max-width: rem(1000)){
+            font-size: rem(36);
+        }
+    }
+
+    &__rigth-text {
+        font-size: rem(16);
+        line-height: 150%;
+        margin-top: rem(16);
+        margin-bottom: rem(52);
+        color: #898CA9;
+    }
+
+    &__rigth-btn {
+        padding: rem(20) rem(33);
+    }
+}

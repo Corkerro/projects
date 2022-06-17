@@ -1,0 +1,194 @@
+.buy {
+    margin-top: rem(280);
+    position: relative;
+    z-index: 6;
+    transform-style: preserve-3d;
+    &::before{
+        content: '';
+        background: url('../img/buy/bg-gradient-img.svg');
+        width: 1163px;
+        height: 1322px;
+        position: absolute;
+        right: 0;
+        top: -600px;
+    }
+    &__container {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: rem(50);
+        line-height: 130%;
+        max-width: rem(780);
+        text-align: center;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: rem(16);
+        max-width: rem(580);
+
+        line-height: 150%;
+        /* or 24px */
+        margin-top: rem(16);
+        margin-bottom: rem(52);
+        text-align: center;
+        
+        /* black/black-60 */
+        
+        color: #898CA9;
+    }
+
+    &__href {
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 100%;
+        /* identical to box height, or 16px */
+        margin-bottom: rem(46);
+        text-align: center;
+        color: #B982FF;
+        transition: all .3s linear;
+        
+        background: linear-gradient(to left, #7000FF, #B982FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        &:hover{
+            background-position: right;
+        }
+        position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 0%;
+			height: 2px;
+			background: linear-gradient(to left, #7000FF, #B982FF);
+			border-radius: 10px;
+            background-size: 200%;
+			transition: width 0.35s;
+		}
+		&:hover::after{
+			width:100%;
+            background-position: right;
+		}
+    }
+
+    &__table {
+        background: #1A1B23;
+        position: relative;
+        z-index: 5;
+        margin: 0 auto;
+        border-radius: rem(25);
+        padding: rem(20) rem(32);
+        width: rem(1180);
+        & td{
+            padding: rem(30) rem(16);
+        }
+        & tr:not(:first-child) td{
+            border-top: 1px solid #2B2C3B;
+        }
+    }
+    &__table-holder{
+        padding-bottom: rem(10);
+        @media only screen and (max-width: rem(1180)){
+            overflow-x: scroll;
+            &::-webkit-scrollbar{
+                width: 100%;
+                position: relative;
+                top: rem(10);
+                height: rem(8);
+                background-color: #fff;
+                border-radius: rem(25);
+            }
+            &::-webkit-scrollbar-thumb{
+                background: #1A1B23;
+                border-radius: rem(2);
+            }
+        }
+    }
+    &__table-title {
+        width: rem(207);
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 150%;
+    }
+
+    &__table-cripto {
+        width: rem(91);
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 150%;
+        color: #B982FF;
+    }
+
+    &__table-price {
+        width: rem(210);
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 150%;
+        text-align: right;
+
+        color: #FFFFFF;
+    }
+
+    &__table-percent {
+        width: rem(100);
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 150%;
+        text-align: right;
+
+        color: #0DBB7C;
+        &-minus{
+            color: #FF8282;
+        }
+    }
+
+    &__table-graphic {
+        width: rem(213);
+    }
+
+    &__table-graphic-img {
+    }
+
+    &__table-text {
+        width: rem(114);
+    }
+
+    &__table-text-href {
+        font-size: rem(16);
+        line-height: 100%;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        gap: rem(12);
+        position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 0%;
+			height: 2px;
+			background: linear-gradient(to left, #7000FF, #B982FF);
+			border-radius: 10px;
+            background-size: 200%;
+			transition: width 0.35s;
+		}
+		&:hover::after{
+			width:90%;
+            background-position: right;
+		}
+    }
+}

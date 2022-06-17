@@ -1,0 +1,92 @@
+.main {
+    position: relative;
+    background: url('../img/main/bg-img.png') center no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 180vh;
+    z-index: 2;
+    background-size: cover;
+    padding-top: 30vh;
+    &__container {
+        max-width: rem(780);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: rem(85);
+        line-height: 130%;
+        /* or 110px */
+        
+        text-align: center;
+        position: relative;
+        z-index: 4;
+        transform-style: preserve-3d;
+        &::before{
+            
+            content: '';
+            background: url('../img/main/glass.svg') center no-repeat;
+            width: 156px;
+            height: 156px;
+            position: absolute;
+            left: 10%;
+            bottom: -5%;
+            transform: translateZ(-1px);
+            z-index: 2;
+        }
+        @media only screen and (max-width: rem(810)){
+            font-size: rem(56);
+            width: rem(480);
+            margin: 0 auto;
+            &::before{
+            
+                content: '';
+                background: url('../img/main/glass.svg') center no-repeat;
+                background-size: cover;
+                width: 84px;
+                height: 84px;
+                position: absolute;
+                left: 11%;
+                bottom: -5%;
+                transform: translateZ(-1px);
+                z-index: 2;
+            }
+        }
+        @media only screen and (max-width: rem(500)){
+            font-size: rem(48);
+            width: 100%;
+            &::before{
+                content: none;
+            }
+        }
+    }
+
+    &__text {
+        font-size: rem(16);
+        line-height: 150%;
+        /* or 24px */
+        
+        text-align: center;
+        
+        /* black/black-60 */
+        
+        color: #898CA9;
+        max-width: rem(580);
+        margin: 0 auto;
+        margin-top: rem(16);
+        margin-bottom: rem(52);
+    }
+
+    &__btn {
+        transition: all .3s linear;
+        padding: rem(20) rem(33);
+        font-weight: 600;
+        font-size: rem(16);
+        line-height: 100%;
+        text-align: center;
+        width: rem(170);
+        margin: 0 auto;
+    }
+}

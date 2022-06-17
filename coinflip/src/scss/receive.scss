@@ -1,0 +1,111 @@
+.receive {
+    margin-top: rem(180);
+    position: relative;
+    z-index: 7;
+    &__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: rem(50);
+        line-height: 130%;
+        text-align: center;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: 150%;
+        margin-top: rem(16);
+        margin-bottom: rem(32);
+        text-align: center;
+
+        color: #898CA9;
+    }
+
+    &__text-href {
+        color: #fff;
+        position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 0%;
+			height: 2px;
+			background: linear-gradient(to left, #7000FF, #B982FF);
+			border-radius: 10px;
+            background-size: 200%;
+			transition: width 0.35s;
+		}
+		&:hover::after{
+			width:100%;
+            background-position: right;
+		}
+    }
+
+    &__form {
+        position: relative;
+        &-inner{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: rem(264);
+            &::before{
+                transition: all .3s linear;
+                position: absolute;
+                content: '';
+                z-index: 4;
+                width: rem(268);
+                height: rem(56);
+                background: linear-gradient(225deg,#933FFE, #18C8FF, #933FFE);
+                background-size: 200%;
+                border-radius: 10px;
+            }
+            &:hover::before{
+                background-position: right;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: rem(1);
+                left: rem(1);
+                z-index: 5;
+                width: rem(266);
+                height: rem(53);
+                background: #0B0B0F;
+                border-radius: 10px;
+            }
+            & span{
+                position: relative;
+                z-index: 6;
+                font-size: rem(20);
+                line-height: 150%;
+                color: #565976;
+                cursor: pointer;
+            }
+        }
+        &-input{
+            position: relative;
+            z-index: 6;
+            outline: none;
+            background: none;
+            color: #fff;
+            padding: rem(18) rem(20);
+            width: rem(230);
+            &::placeholder{
+                font-size: rem(14);
+                line-height: 150%;
+                color: #565976;
+            }
+        }
+        
+    }
+}
+
+
